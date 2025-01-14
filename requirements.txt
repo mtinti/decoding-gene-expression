@@ -1,8 +1,8 @@
-tqdm
-shap
-seaborn
-scipy
-scikit-learn
-pandas
-matplotlib
-eli5
+matplotlib==3.10.0
+numpy==2.0.2
+pandas==2.2.3
+scikit-learn==1.6.1
+scipy==1.15.1
+seaborn==0.13.2
+shap==0.46.0
+tqdm==4.67.1
