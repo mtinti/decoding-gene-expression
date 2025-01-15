@@ -4,7 +4,7 @@
 
 <h1> Decoding post-transcriptional gene expression controls in trypanosomatids.<h1>
 
-<h2> What relative contributions do UTRs and codon usage bias <br> make to Translation Efficiency  in _T. brucei_ ?</h2>
+<h2> What relative contributions do UTRs and codon usage bias <br> make to Translation Efficiency  in <i>T. brucei</i>?</h2>
 
 
 ![image](https://github.com/mtinti/decoding-gene-expression/blob/main/TB/Tb_TE.svg)
