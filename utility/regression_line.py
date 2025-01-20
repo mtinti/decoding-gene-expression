@@ -11,7 +11,7 @@ def abline(y_test, pred, ax,
     
     # Add regression line
     m, b = np.polyfit(y_test, pred, 1)
-    ax.plot(y_test, m*y_test + b, 'r-')
+    #ax.plot(y_test, m*y_test + b, 'r-')
     
     # Calculate metrics
     r2 = r2_score(y_test, pred)
