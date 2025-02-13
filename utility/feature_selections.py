@@ -26,3 +26,39 @@ def recursive_feature_elimination(df, threshold=0.95):
         df = df.drop(columns=[max_corr_feature])
         
     return df.columns.tolist(), features_to_drop
+
+
+def test_recursive_feature_elimination():
+    # Create test data
+    np.random.seed(42)
+    n = 100
+    
+    df = pd.DataFrame({
+        'a': np.random.randn(n),
+        'b': np.random.randn(n),
+        'c': np.random.randn(n),
+        'd': np.random.randn(n),
+        
+    })
+    # Make 'b' highly correlated with 'a'
+    df['b'] = df['a'] + np.random.randn(n) * 0.5
+    df['c'] = df['b'] + np.random.randn(n) * 0.1
+    
+    print(df.corr())
+    
+    print('Test case 1: Basic functionality')
+    remaining_features, dropped_features = recursive_feature_elimination(df, threshold=0.95)
+    print(dropped_features)
+    assert len(dropped_features) == 1
+
+    print('Test case 2: No correlations above threshold')
+    remaining_features, dropped_features = recursive_feature_elimination(df, threshold=0.999)
+    print(dropped_features)
+    assert len(dropped_features) == 0
+    #assert len(remaining_features) == 3
+
+    print('Test case 3: 2 correlations above threshold')
+    remaining_features, dropped_features = recursive_feature_elimination(df, threshold=0.8)
+    print(dropped_features)
+    assert len(dropped_features) == 2
+    

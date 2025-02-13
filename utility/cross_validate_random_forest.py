@@ -21,7 +21,7 @@ def cross_validate_random_forest(X, y, n_splits=3, random_state=42, params=None)
             'max_depth': 5,
             'n_estimators': 100,
             'min_samples_leaf': 10,
-            'max_features': 5,
+            'max_features': 5, #5
             'random_state': random_state
         }
     
