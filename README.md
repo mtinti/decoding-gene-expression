@@ -7,7 +7,7 @@
 <h2> What relative contributions do UTRs and codon usage bias <br> make to Translation Efficiency  in <i>T. brucei</i>?</h2>
 
 
-![image](TB/Tb_TE.svg)
+![image](TB/Tb_TE.)
 
 
 
